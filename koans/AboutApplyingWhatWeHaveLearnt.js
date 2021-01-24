@@ -32,7 +32,7 @@ describe("About Applying What We Have Learnt", function() {
         }
     }
 
-    expect(productsICanEat.length).toBe(1);
+    expect(productsICanEat.length).toBe(FILL_ME_IN);
   });
 
   it("given I'm allergic to nuts and hate mushrooms, it should find a pizza I can eat (functional)", function () {
@@ -41,9 +41,7 @@ describe("About Applying What We Have Learnt", function() {
 
       /* solve using filter() & all() / any() */
 
-      productsICanEat = products.filter( product => !product.containsNuts  && !product.ingredients.some(_ => _ === "mushrooms"))
-
-      expect(productsICanEat.length).toBe(1);
+      expect(productsICanEat.length).toBe(FILL_ME_IN);
   });
 
   /*********************************************************************************/
@@ -57,14 +55,14 @@ describe("About Applying What We Have Learnt", function() {
       }
     }
 
-    expect(sum).toBe(233168);
+    expect(sum).toBe(FILL_ME_IN);
   });
 
   it("should add all the natural numbers below 1000 that are multiples of 3 or 5 (functional)", function () {
 
-    var sum = _.range(1000).filter(_ => (_ % 3 === 0 || _ % 5 === 0)).reduce(function (sum, x) { return sum + x });    /* try chaining range() and reduce() */
+    var sum = FILL_ME_IN;    /* try chaining range() and reduce() */
 
-    expect(233168).toBe(sum);
+    expect(233168).toBe(FILL_ME_IN);
   });
 
   /*********************************************************************************/
@@ -77,24 +75,15 @@ describe("About Applying What We Have Learnt", function() {
         }
     }
 
-    expect(ingredientCount['mushrooms']).toBe(2);
+    expect(ingredientCount['mushrooms']).toBe(FILL_ME_IN);
   });
 
   it("should count the ingredient occurrence (functional)", function () {
     var ingredientCount = { "{ingredient name}": 0 };
-      ingredientCount =  _(products).chain().map(_ => _.ingredients).flatten().reduce((memo, ingredient) => {
-          // console.log(memo)
-          if (memo !== undefined
-                && typeof memo === 'string'
-           ) {
-               return {[memo]: 1};
-           }
-          memo[ingredient] = memo[ingredient] === undefined ? 1 : memo[ingredient]+1;
-          return memo;
-      }).value();
 
-      // console.log(JSON.stringify(ingredientCount))
-    expect(ingredientCount['mushrooms']).toBe(2);
+    /* chain() together map(), flatten() and reduce() */
+
+    expect(ingredientCount['mushrooms']).toBe(FILL_ME_IN);
   });
 
   /*********************************************************************************/
